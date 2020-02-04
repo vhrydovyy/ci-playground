@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh 'pip3 install -r behave/requirements.txt'
+      }
+    }
+
   }
 }
