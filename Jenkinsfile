@@ -17,5 +17,11 @@ prospector --profile behave/prospector-profile.yaml --output-format=pylint:behav
       }
     }
 
+    stage('') {
+      steps {
+        archiveArtifacts(artifacts: 'behave/tmp/lint.txt', allowEmptyArchive: true)
+      }
+    }
+
   }
 }
