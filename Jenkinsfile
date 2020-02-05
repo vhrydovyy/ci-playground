@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('error') {
+    stage('Tests') {
       steps {
         sh 'pip3 install -r behave/requirements.txt'
         sh 'prospector --profile behave/prospector-profile.yaml --output-format=pylint:./tmp/lint.txt'
