@@ -13,7 +13,7 @@ pipeline {
         sh 'mkdir tmp && touch tmp/lint.txt'
         sh '''
 
-prospector --profile behave/prospector-profile.yaml --output-format=pylint:behave/tmp/lint.txt'''
+prospector --profile behave/prospector-profile.yaml --output-format=pylint:behave/tmp/lint.txt behave/'''
       }
     }
 
