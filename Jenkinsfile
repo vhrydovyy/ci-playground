@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         sh 'pip3 install -r behave/requirements.txt'
       }
