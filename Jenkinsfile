@@ -10,7 +10,7 @@ pipeline {
     stage('Tests') {
       steps {
         sh 'pip3 install -r behave/requirements.txt'
-        sh 'mkdir tmp && touch tmp/lint.txt'
+        sh 'mkdir behave/tmp && touch behave/tmp/lint.txt'
         sh '''
 
 prospector --profile behave/prospector-profile.yaml --output-format=pylint:behave/tmp/lint.txt behave/'''
